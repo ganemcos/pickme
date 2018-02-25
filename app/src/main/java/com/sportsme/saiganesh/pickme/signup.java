@@ -14,11 +14,14 @@ package com.sportsme.saiganesh.pickme;
         import com.google.firebase.auth.AuthResult;
         import com.google.firebase.auth.FirebaseAuth;
         import com.google.firebase.auth.FirebaseUser;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
 
 public class signup extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     EditText emal,password;
+    DatabaseReference data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,8 @@ public class signup extends AppCompatActivity {
 
         emal=(EditText)findViewById(R.id.email);
         password=(EditText)findViewById(R.id.password);
+
+        data= FirebaseDatabase.getInstance().getReference();
 
         findViewById(R.id.btnsignup).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +46,8 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(signup.this, "user Created", Toast.LENGTH_SHORT).show();
                         editor.apply();
                         Intent login = new Intent(signup.this,LoginActivity.class);
+                        data.child("email").setValue(emal.getText().toString());
+                        data.child("password").setValue(password.getText().toString());
                     }
                 });
             }

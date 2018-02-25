@@ -30,4 +30,15 @@ public class ChoosemodeActivity extends AppCompatActivity {
             startActivity(new Intent(ChoosemodeActivity.this,LoginActivity.class));
         }
     }
+
+    public void mapshift(View view)
+    {
+        Intent intent = new Intent(ChoosemodeActivity.this,LiftActivity.class);
+        startActivity(intent);
+    }
+    public void locations(View view)
+    {
+        Intent intent = new Intent(ChoosemodeActivity.this,TravelActivity.class);
+        startActivity(intent);
+    }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8BBD0"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        style="@style/mainscreen"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="numberActivity"
+        android:text="Pick Home Location" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"/>
+
+    <TextView
+        style="@style/mainscreen"
+        android:background="@color/colorPrimary"
+        android:onClick="familyActivity"
+        android:text="Pick Office Location" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"/>
+
+    <TextView
+        style="@style/mainscreen"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="greetingsActivity"
+        android:text="Pick up a favarite spot 1" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"/>
+
+
+    <TextView
+        style="@style/mainscreen"
+        android:background="@color/colorPrimary"
+        android:onClick="pharsesActivity"
+        android:text="Pick up a favarite spot 2" />
+
+
+</LinearLayout>

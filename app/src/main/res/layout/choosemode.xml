@@ -31,6 +31,7 @@
             android:background="@drawable/circle"
             android:fontFamily="cursive"
             android:gravity="center"
+            android:onClick="locations"
             android:text="@string/travel"
             android:textColor="@color/text_icon"
             android:textSize="30sp" />
@@ -45,10 +46,11 @@
             android:background="@drawable/circle"
             android:fontFamily="cursive"
             android:gravity="center"
+            android:onClick="mapshift"
+            android:text="@string/lift"
             android:textColor="@color/text_icon"
             android:textSize="30sp"
-            tools:text="@string/lift"
-            android:text="@string/lift"/>
+            tools:text="@string/lift" />
     </LinearLayout>
 
     <TextView
