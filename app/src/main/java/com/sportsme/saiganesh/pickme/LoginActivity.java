@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Toast.makeText(LoginActivity.this, "Logged in", Toast.LENGTH_SHORT).show();
-
                         Intent home = new Intent(LoginActivity.this,ChoosemodeActivity.class);
                         startActivity(home);
                     }

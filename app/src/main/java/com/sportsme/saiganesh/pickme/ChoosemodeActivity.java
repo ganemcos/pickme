@@ -29,6 +29,8 @@ public class ChoosemodeActivity extends AppCompatActivity {
         else {
             startActivity(new Intent(ChoosemodeActivity.this,LoginActivity.class));
         }
+
+
     }
 
     public void mapshift(View view)

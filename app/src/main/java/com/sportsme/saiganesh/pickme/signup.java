@@ -13,7 +13,6 @@ package com.sportsme.saiganesh.pickme;
         import com.google.android.gms.tasks.Task;
         import com.google.firebase.auth.AuthResult;
         import com.google.firebase.auth.FirebaseAuth;
-        import com.google.firebase.auth.FirebaseUser;
         import com.google.firebase.database.DatabaseReference;
         import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,7 +36,8 @@ public class signup extends AppCompatActivity {
         findViewById(R.id.btnsignup).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.createUserWithEmailAndPassword(emal.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(emal.getText().toString(),password.getText().toString())
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         SharedPreferences sharedPreferences=getSharedPreferences("PREFS",0);
@@ -46,6 +46,7 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(signup.this, "user Created", Toast.LENGTH_SHORT).show();
                         editor.apply();
                         Intent login = new Intent(signup.this,LoginActivity.class);
+                        startActivity(login);
                         data.child("email").setValue(emal.getText().toString());
                         data.child("password").setValue(password.getText().toString());
                     }

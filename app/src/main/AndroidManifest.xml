@@ -37,7 +37,9 @@
         <activity android:name=".TravelActivity" />
         <activity
             android:name=".LiftActivity"
-            android:label="@string/title_activity_lift"></activity>
+            android:label="@string/title_activity_lift">
+
+        </activity>
     </application>
 
 </manifest>
